@@ -29,12 +29,10 @@ function func1(){
 }
 func1()
 
-///
+
 let tr = ''
 let counter = 0;
-// let table2 = table
-// console.log(table2)
-// html = ""
+
 function func2(){
     counter++
 
@@ -65,38 +63,22 @@ function func2(){
         td5 = `<td style="background-color: ${getColor(q)};">${q}</td>`
         tr += td5
         table += td5
-        table += `<tr>${tr}</tr>`
+        table += `<tr style="display: none">${tr}</tr>`
+
         counter = 0;
         tr = ''
     }
-    
-    // tr = `
-    // <td>${td1}</td>
-    // <td>${td2}</td>
-    // <td>${td3}</td>
-    // <td>${td4}</td>
-    // <td>${td5}</td>
-    // `
 
-
-    // table += `<tr>${tr}</tr>`
 
     html = `<table>${table}</table>`
-    // console.log(document.body.lastElementChild.previousElementSibling.previousElementSibling)
-    document.body.lastElementChild.innerHTML = ""
-
+    document.body.lastElementChild.innerHTML = null
     document.body.innerHTML += html
+    // console.log(document.body.lastElementChild.lastElementChild.lastElementChild.previousElementSibling)
 }
-// let wer = document.body.firstChild.nextSibling.nextSibling.nextSibling.nextSibling
-// console.log(wer)
-// func2()
 
 
 let html = ""
-
 html+= `<table>${table}</table><hr>`
-// html+= `<table>${func2()}</table>`
-
 document.body.innerHTML += html
 
 
