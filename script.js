@@ -82,6 +82,8 @@ function func2(){
     // table += `<tr>${tr}</tr>`
 
     html = `<table>${table}</table>`
+    // console.log(document.body.lastElementChild.previousElementSibling.previousElementSibling)
+    document.body.lastElementChild.innerHTML = ""
 
     document.body.innerHTML += html
 }
@@ -92,7 +94,7 @@ function func2(){
 
 let html = ""
 
-html+= `<table>${table}</table>`
+html+= `<table>${table}</table><hr>`
 // html+= `<table>${func2()}</table>`
 
 document.body.innerHTML += html
